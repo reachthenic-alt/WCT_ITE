@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+
+        /* Contact form */
+        form .field {
+            margin-bottom: 14px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        form input,
+        form select,
+        form textarea {
+            font-family: Arial, sans-serif;
+            font-size: 1rem;
+            padding: 8px 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 100%;
+            max-width: 420px;
+        }
+
+        form textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        form button {
+            padding: 8px 24px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="#main-content" style="position:absolute;top:-999px;left:0;background:#333;color:#fff;padding:6px 12px;border-radius:0 0 4px 0;" onfocus="this.style.top='0'">Skip to main content</a>
+
+    <header>
+        <h1>Welcome to our restaurant</h1>
+    </header>
+
+    <nav aria-label="Page sections">
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#dish">Our Dish</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main id="main-content">
+
+        <section id="about" aria-labelledby="about-heading">
+            <h2 id="about-heading">About</h2>
+            <img src="sandwich.png" alt="Our main dish: a toasted chicken sandwich with lettuce, tomato, and mayonnaise">
+        </section>
+
+        <section id="dish" aria-labelledby="dish-heading">
+            <h2 id="dish-heading">This is our main dish</h2>
+
+            <h3>Ingredients</h3>
+            <ul>
+                <li>Bread</li>
+                <li>Chicken</li>
+                <li>Lettuce</li>
+                <li>Tomato</li>
+                <li>Mayonnaise</li>
+            </ul>
+
+            <h3>Steps</h3>
+            <ol>
+                <li>Prepare all ingredients</li>
+                <li>Cook the chicken</li>
+                <li>Toast the bread</li>
+                <li>Assemble the sandwich</li>
+                <li>Serve and enjoy</li>
+            </ol>
+
+            <h3>Nutrition Information</h3>
+            <table>
+                <caption>Nutrition per serving</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Calories</th>
+                        <th scope="col">Protein</th>
+                        <th scope="col">Fat</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>450 kcal</td>
+                        <td>30g</td>
+                        <td>15g</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Watch How to Cook</h3>
+            <iframe width="560" height="315"
+                src="https://www.youtube.com/embed/luIh3xq8OKI"
+                title="YouTube video: how to make a chicken sandwich"
+                frameborder="0"
+                allowfullscreen>
+            </iframe>
+        </section>
+
+        <section id="links" aria-labelledby="links-heading">
+            <h2 id="links-heading">Projects &amp; Links</h2>
+            <ul>
+                <li><a href="https://github.com" target="_blank" rel="noopener">GitHub</a></li>
+                <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
+                <li><a href="../test/hello.html">Back to Hello Page</a></li>
+            </ul>
+        </section>
+
+        <section id="contact" aria-labelledby="contact-heading">
+            <h2 id="contact-heading">Contact Us</h2>
+
+            <form action="#" method="post" novalidate>
+
+                <div class="field">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" required minlength="2" autocomplete="name" placeholder="Your name">
+                </div>
+
+                <div class="field">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required autocomplete="email" placeholder="you@example.com">
+                </div>
+
+                <div class="field">
+                    <label for="topic">Topic *</label>
+                    <select id="topic" name="topic" required>
+                        <option value="" disabled selected>Select a topic…</option>
+                        <option value="reservation">Reservation</option>
+                        <option value="feedback">Feedback</option>
+                        <option value="catering">Catering</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" required minlength="10" placeholder="Your message…"></textarea>
+                </div>
+
+                <button type="submit">Send</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Our Restaurant</p>
+    </footer>
+
+</body>
+</html>
